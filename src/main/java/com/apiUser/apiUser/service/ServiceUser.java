@@ -1,15 +1,15 @@
 package com.apiUser.apiUser.service;
 
-import com.apiUser.apiUser.model.User;
+import com.apiUser.apiUser.model.Users;
 
 import java.util.Optional;
 
 public interface ServiceUser {
-    User intoUser(User user);
+    Users intoUser(Users user);
 
-    User getUser(Long idUser);
+    Users getUser(Long idUser);
 
-    User setUser(Long id, User saveUser);
+    Users setUser(Long id, Users saveUser);
 
     boolean delUser(Long id);
 }

@@ -1,6 +1,6 @@
 package com.apiUser.apiUser.service;
 
-import com.apiUser.apiUser.model.User;
+import com.apiUser.apiUser.model.Users;
 import com.apiUser.apiUser.repository.RepositoryUser;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,19 +13,21 @@ public class ServiceUserImpl implements ServiceUser {
     private final RepositoryUser repositoryUser;
 
     @Override
-    public User intoUser(User user) {
+    public Users intoUser(Users user) {
         return repositoryUser.save(user);
     }
 
     @Override
-    public User getUser(Long idUser) {
+    public Users getUser(Long idUser) {
         return repositoryUser.findById(idUser).orElseThrow(() -> {throw new RuntimeException();});
     }
 
     @Override
-    public User setUser(Long id, User saveUser) {
-        User userFound = repositoryUser.findById(id).get();
+    public Users setUser(Long id, Users saveUser) {
+        Users userFound = repositoryUser.findById(id).get();
         userFound.setMail(saveUser.getMail());
+        userFound.setName(saveUser.getName());
+        userFound.setPass(saveUser.getPass());
         return repositoryUser.save(userFound);
     }
 

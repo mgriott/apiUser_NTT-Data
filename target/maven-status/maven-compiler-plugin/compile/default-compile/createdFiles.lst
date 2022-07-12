@@ -1,0 +1,7 @@
+com\apiUser\apiUser\ApiUserApplication.class
+com\apiUser\apiUser\repository\RepositoryUser.class
+com\apiUser\apiUser\service\ServiceUserImpl.class
+com\apiUser\apiUser\controller\ControllerUser.class
+com\apiUser\apiUser\model\Phones.class
+com\apiUser\apiUser\model\Users.class
+com\apiUser\apiUser\service\ServiceUser.class
